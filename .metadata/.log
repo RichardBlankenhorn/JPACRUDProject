@@ -235,3 +235,6 @@ Java Model Exception: Java Model Status [Cannot nest 'JPACRUDFootball/src/main/j
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
 !SUBENTRY 1 org.eclipse.jdt.core 4 964 2018-04-19 16:22:43.076
 !MESSAGE Cannot nest 'JPACRUDFootball/src/main/java' inside 'JPACRUDFootball/src'. To enable the nesting exclude 'main/' from 'JPACRUDFootball/src'
+
+!ENTRY org.eclipse.wst.server.discovery 1 0 2018-04-19 16:54:46.799
+!MESSAGE already installed: org.eclipse.jst.server.generic.jonas4
