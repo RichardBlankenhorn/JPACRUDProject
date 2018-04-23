@@ -48,30 +48,9 @@ public class TeamDAOImpl implements TeamDAO {
 		return team;
 	}
 
-	// @Override
-	// public Team update(int teamId, Team team) {
-	// String query = "SELECT t FROM Team t WHERE id = :teamId";
-	// System.out.println(team.getId() + " " + team.getTeamName());
-	// System.out.println(teamId + "");
-	// try {
-	// Team getTeam = em.createQuery(query, Team.class).setParameter("teamId",
-	// teamId).getSingleResult();
-	// getTeam.setTeamName(team.getTeamName());
-	// getTeam.setCity(team.getCity());
-	// getTeam.setCountry(team.getCountry());
-	// System.out.println(getTeam.getTeamName());
-	// return getTeam;
-	// } catch (Exception e) {
-	// System.out.println("Error Updating");
-	// return team;
-	// }
-	// }
-
 	@Override
 	public Team update(int teamId, String teamName, String city, String country) {
 		String query = "SELECT t FROM Team t WHERE id = :teamId";
-		System.out.println(teamId + " " + teamName);
-		System.out.println(teamId + "");
 		try {
 			Team getTeam = em.createQuery(query, Team.class).setParameter("teamId", teamId).getSingleResult();
 			getTeam.setTeamName(teamName);

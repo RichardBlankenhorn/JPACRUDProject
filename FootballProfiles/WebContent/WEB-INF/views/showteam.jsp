@@ -61,9 +61,6 @@
 						href="#about">Update</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-						href="#contact">Contact</a></li>
-					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
 						href="index.do">Home</a></li>
 				</ul>
 
@@ -74,8 +71,6 @@
 	<!-- Header -->
 	<header class="masthead bg-primary text-white text-center">
 		<div class="container">
-			<img class="img-fluid mb-5 d-block mx-auto"
-				src="img/ChelseaCrest.png" alt="">
 			<h1 class="text-uppercase mb-0">${team.teamName }</h1>
 			<hr class="star-light">
 		</div>
@@ -124,17 +119,22 @@
 			<hr class="star-dark mb-5">
 
 			<div class="form-row">
-				<div class="form-group col-md-4">
+				<div class="form-group col-md-3">
 					<h4 class="text-center">
-						<u>Player Name</u>
+						<u>First Name</u>
 					</h4>
 				</div>
-				<div class="form-group col-md-4">
+				<div class="form-group col-md-3">
+					<h4 class="text-center">
+						<u>Last Name</u>
+					</h4>
+				</div>
+				<div class="form-group col-md-3">
 					<h4 class="text-center">
 						<u>Position</u>
 					</h4>
 				</div>
-				<div class="form-group col-md-4">
+				<div class="form-group col-md-3">
 					<h4 class="text-center">
 						<u>Number</u>
 					</h4>
@@ -143,13 +143,16 @@
 
 			<c:forEach var="p" items="${players }">
 				<div class="form-row">
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-3">
 						<h4 class="text-center text-uppercase text-secondary mb-0">${p.firstName }</h4>
 					</div>
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-3">
+						<h4 class="text-center text-uppercase text-secondary mb-0">${p.lastName }</h4>
+					</div>
+					<div class="form-group col-md-3">
 						<h4 class="text-center text-uppercase text-secondary mb-0">${p.position }</h4>
 					</div>
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-3">
 						<h4 class="text-center text-uppercase text-secondary mb-0">${p.teamNumber }</h4>
 					</div>
 				</div>
@@ -160,7 +163,7 @@
 	</section>
 
 	<!-- Footer -->
-	<footer class="footer text-center">
+	<footer class="footer text-center" id="about">
 		<div class="container">
 			<h2 class="text-center text-uppercase mb-2">Modify Team</h2>
 			<hr class="star-dark mb-5">

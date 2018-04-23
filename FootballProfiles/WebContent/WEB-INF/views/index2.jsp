@@ -61,7 +61,7 @@
 						href="#about">Add Team</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger"
-						href="#contact">Contact</a></li>
+						href="#contact">Highlight</a></li>
 				</ul>
 			</div>
 		</div>
@@ -70,8 +70,8 @@
 	<!-- Header -->
 	<header class="masthead bg-primary text-white text-center">
 		<div class="container">
-			<img class="img-fluid mb-5 d-block mx-auto"
-				src="img/ChelseaCrest.png" alt="">
+			<!--  <img class="img-fluid mb-5 d-block mx-auto"
+				src="img/portfolio/ChelseaCrest.png" alt=""> -->
 			<h1 class="text-uppercase mb-0">Football Profiles</h1>
 			<hr class="star-light">
 			<h2 class="font-weight-light mb-0">The Beautiful Game</h2>
@@ -88,8 +88,9 @@
 				<c:forEach var="t" items="${teams }">
 					<div class="col-md-6 col-lg-4">
 						<form action="team.do" method="GET">
-							<input type="hidden" name="tID" value="${t.id }">
-							<a href="team.do?tID=${t.id }"><h3 class="text-center text-uppercase text-secondary mb-0">${t.teamName }</h3></a>
+							<input type="hidden" name="tID" value="${t.id }"> <a
+								href="team.do?tID=${t.id }"><h3
+									class="text-center text-uppercase text-secondary mb-0">${t.teamName }</h3></a>
 							<br>
 						</form>
 
@@ -134,46 +135,13 @@
 
 
 	<!-- Footer -->
-	<footer class="footer text-center">
+	<footer class="footer text-center" id="contact">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4 mb-5 mb-lg-0">
-					<h4 class="text-uppercase mb-4">Location</h4>
-					<p class="lead mb-0">
-						2215 John Daniel Drive <br>Clark, MO 65243
-					</p>
-				</div>
-				<div class="col-md-4 mb-5 mb-lg-0">
-					<h4 class="text-uppercase mb-4">Around the Web</h4>
-					<ul class="list-inline mb-0">
-						<li class="list-inline-item"><a
-							class="btn btn-outline-light btn-social text-center rounded-circle"
-							href="#"> <i class="fa fa-fw fa-facebook"></i>
-						</a></li>
-						<li class="list-inline-item"><a
-							class="btn btn-outline-light btn-social text-center rounded-circle"
-							href="#"> <i class="fa fa-fw fa-google-plus"></i>
-						</a></li>
-						<li class="list-inline-item"><a
-							class="btn btn-outline-light btn-social text-center rounded-circle"
-							href="#"> <i class="fa fa-fw fa-twitter"></i>
-						</a></li>
-						<li class="list-inline-item"><a
-							class="btn btn-outline-light btn-social text-center rounded-circle"
-							href="#"> <i class="fa fa-fw fa-linkedin"></i>
-						</a></li>
-						<li class="list-inline-item"><a
-							class="btn btn-outline-light btn-social text-center rounded-circle"
-							href="#"> <i class="fa fa-fw fa-dribbble"></i>
-						</a></li>
-					</ul>
-				</div>
-				<div class="col-md-4">
-					<h4 class="text-uppercase mb-4">About Freelancer</h4>
-					<p class="lead mb-0">
-						Freelance is a free to use, open source Bootstrap theme created by
-						<a href="http://startbootstrap.com">Start Bootstrap</a>.
-					</p>
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/QoSaW-QfbMo" frameborder="0"
+						allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
