@@ -20,7 +20,7 @@ public class Player {
 	private String lastName;
 	@Enumerated(EnumType.STRING)
 	private Position position;
-	@Column(name = "team_number")
+	@Column(name = "number")
 	private int teamNumber;
 	@Column(name = "team_id")
 	private int teamId;

@@ -14,4 +14,12 @@
 	<!-- VideoStore-servlet.xml -->
 	<mvc:annotation-driven />
 	
+	<bean id="myEMF" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="persistenceUnitName" value="CrudApp"></property>
+	</bean>
+	<bean id="myTXMgr" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="myEMF"></property>	
+	</bean>
+	
+	<tx:annotation-driven transaction-manager="myTXMgr"/>
 </beans>

@@ -27,6 +27,14 @@ public class Team {
 		this.city = city;
 		this.country = country;
 	}
+	
+//	public Team(int id, String teamName, String city, String country) {
+//		super();
+//		this.id = id;
+//		this.teamName = teamName;
+//		this.city = city;
+//		this.country = country;
+//	}
 
 	public String getTeamName() {
 		return teamName;

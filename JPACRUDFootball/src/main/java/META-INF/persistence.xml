@@ -9,15 +9,21 @@
 		</provider>
 		
 		<!-- Entities -->
-		<class>com.skilldistillery.jpacrud.entities.Customer</class>
-		<class>com.skilldistillery.jpacrud.entities.Address</class>
+		<class>com.skilldistillery.jpacrud.entities.Player</class>
+		<class>com.skilldistillery.jpacrud.entities.Team</class>
+		<class>com.skilldistillery.jpacrud.entities.Position</class>
+		<!-- Data -->
+		<class>com.skilldistillery.jpacrud.data.PlayerDAO</class>
+		<class>com.skilldistillery.jpacrud.data.PlayerDAOImpl</class>
+		<class>com.skilldistillery.jpacrud.data.TeamDAO</class>
+		<class>com.skilldistillery.jpacrud.data.TeamDAOImpl</class>
 		
 		<properties>
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:mysql://localhost:3306/CHANGEME" />
-			<property name="javax.persistence.jdbc.user" value="CHANGEME" />
+				value="jdbc:mysql://localhost:3306/realfootball" />
+			<property name="javax.persistence.jdbc.user" value="realfootball" />
 			<property name="javax.persistence.jdbc.password"
-				value="CHANGEME" />
+				value="RSBsept2882?" />
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.jdbc.Driver" />
 
