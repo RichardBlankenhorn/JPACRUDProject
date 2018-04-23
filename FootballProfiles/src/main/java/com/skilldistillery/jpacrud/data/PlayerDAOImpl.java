@@ -34,8 +34,10 @@ public class PlayerDAOImpl implements PlayerDAO {
 
 	@Override
 	public Player create(Player player) {
-		// TODO Auto-generated method stub
-		return null;
+		em.clear();
+		em.persist(player);
+		em.flush();
+		return player;
 	}
 
 	@Override

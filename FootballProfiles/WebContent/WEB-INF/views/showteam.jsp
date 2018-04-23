@@ -172,9 +172,9 @@
 					</form>
 				</div>
 				<div class="form-group col-md-4">
-					<form action="delete.do" method="POST">
+					<form action="newPlayer.do" method="GET">
 						<input type="hidden" name="teamID" value="${team.id }" />
-						<button type="submit" class="btn btn-primary">Update Players</button>
+						<button type="submit" class="btn btn-primary">Add Player</button>
 					</form>
 				</div>
 				<div class="form-group col-md-4">

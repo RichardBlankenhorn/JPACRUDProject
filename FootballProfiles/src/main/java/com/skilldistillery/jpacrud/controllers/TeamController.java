@@ -12,6 +12,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.skilldistillery.jpacrud.data.PlayerDAO;
 import com.skilldistillery.jpacrud.data.TeamDAO;
 import com.skilldistillery.jpacrud.entities.Player;
+import com.skilldistillery.jpacrud.entities.Position;
 import com.skilldistillery.jpacrud.entities.Team;
 
 @Controller
@@ -70,15 +71,6 @@ public class TeamController {
 		return mv;
 	}
 
-	// @RequestMapping(path = "updateTeam.do", method = RequestMethod.POST)
-	// public ModelAndView updateTeam(Team team) {
-	// ModelAndView mv = new ModelAndView();
-	// Team updatedTeam = dao.update(team.getId(), team);
-	// mv.addObject("team", updatedTeam);
-	// mv.setViewName("WEB-INF/views/showteam.jsp");
-	// return mv;
-	// }
-
 	@RequestMapping(path = "updateTeam.do", method = RequestMethod.POST)
 	public ModelAndView updateTeam(@RequestParam(name = "teamID") int teamId,
 			@RequestParam(name = "teamName") String teamName, @RequestParam(name = "city") String city,
@@ -87,6 +79,27 @@ public class TeamController {
 		Team updatedTeam = dao.update(teamId, teamName, city, country);
 		mv.addObject("team", updatedTeam);
 		mv.setViewName("WEB-INF/views/showteam.jsp");
+		return mv;
+	}
+
+	@RequestMapping(path = "newPlayer.do", method = RequestMethod.GET)
+	public ModelAndView newPlayer(@RequestParam(name = "teamID") int teamId) {
+		ModelAndView mv = new ModelAndView();
+		Team team = dao.getTeamById(teamId);
+		mv.addObject("team", team);
+		mv.setViewName("WEB-INF/views/createPlayer.jsp");
+		return mv;
+	}
+
+	@RequestMapping(path = "createPlayer.do", method = RequestMethod.POST)
+	public ModelAndView createPlayer(@RequestParam(name = "teamID") int teamId,
+			@RequestParam(name = "firstName") String firstName, @RequestParam(name = "lastName") String lastName,
+			@RequestParam(name = "position") Position position, @RequestParam(name = "teamNumber") int teamNumber) {
+		ModelAndView mv = new ModelAndView();
+		Player player = new Player(firstName, lastName, position, teamNumber, teamId);
+		Player newPlayer = pdao.create(player);
+		mv.addObject("tID",newPlayer.getTeamId());
+		mv.setViewName("redirect:team.do");
 		return mv;
 	}
 
