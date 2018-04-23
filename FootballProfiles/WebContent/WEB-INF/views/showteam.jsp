@@ -191,6 +191,39 @@
 		</div>
 	</footer>
 
+	<!-- Footer -->
+	<c:if test="${team.teamName.equals('Chelsea FC') }">
+		<footer class="footer text-center" id="contact">
+			<div class="container">
+				<h2 class="text-center text-uppercase mb-2">Highlight</h2>
+				<hr class="star-dark mb-5">
+				<div class="row">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe width="560" height="315"
+							src="https://www.youtube.com/embed/QoSaW-QfbMo" frameborder="0"
+							allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</c:if>
+
+	<c:if test="${team.teamName.equals('Liverpool FC') }">
+		<footer class="footer text-center" id="contact">
+			<div class="container">
+				<h2 class="text-center text-uppercase mb-2">Highlight</h2>
+				<hr class="star-dark mb-5">
+				<div class="row">
+					<div class="embed-responsive embed-responsive-16by9">
+						<iframe width="560" height="315"
+							src="https://www.youtube.com/embed/8uVF74OqZDY" frameborder="0"
+							allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</c:if>
+
 </body>
 </html>
 
