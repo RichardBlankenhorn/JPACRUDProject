@@ -102,18 +102,15 @@
 							placeholder="last name">
 					</div>
 					<div class="form-group col-md-2">
-						<label for="inputPassword4">Position</label>
-						<!--<input type="text"
-							name="position" required class="form-control" id="inputPassword4"
-							placeholder="position"> -->
-						<select name="position">
+						<label for="position">Position</label>
+						<select name="position" class="form-control">
 							<option value="Keeper">Keeper</option>
 							<option value="Striker">Striker</option>
 							<option value="Midfielder">Midfielder</option>
 							<option value="Defender">Defender</option></select>
 					</div>
 					<div class="form-group col-md-2">
-						<label for="inputPassword4">Number</label> <input type="number"
+						<label for="teamNumber">Number</label> <input type="number"
 							name="teamNumber" required class="form-control"
 							id="inputPassword4" placeholder="number">
 					</div>

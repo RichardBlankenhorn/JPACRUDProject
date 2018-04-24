@@ -15,4 +15,5 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'JPACRUDFootball'
+rootProject.name = 'FootballProfiles'
+includeFlat 'JPACRUDFootball'

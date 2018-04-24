@@ -11,9 +11,11 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.skilldistillery.jpacrud.data.PlayerDAO;
 import com.skilldistillery.jpacrud.data.TeamDAO;
+import com.skilldistillery.jpacrud.data.TrophyDAO;
 import com.skilldistillery.jpacrud.entities.Player;
 import com.skilldistillery.jpacrud.entities.Position;
 import com.skilldistillery.jpacrud.entities.Team;
+import com.skilldistillery.jpacrud.entities.Trophy;
 
 @Controller
 public class TeamController {
@@ -22,6 +24,8 @@ public class TeamController {
 	private TeamDAO dao;
 	@Autowired
 	private PlayerDAO pdao;
+	@Autowired
+	private TrophyDAO tdao;
 
 	@RequestMapping(path = "index.do", method = RequestMethod.GET)
 	public ModelAndView index() {
@@ -37,6 +41,8 @@ public class TeamController {
 		ModelAndView mv = new ModelAndView();
 		Team team = dao.getTeamById(teamId);
 		List<Player> players = pdao.getPlayersByTeam(teamId);
+		Trophy trophy = tdao.getTrophyByTeamId(teamId);
+		mv.addObject("trophy", trophy);
 		mv.addObject("players", players);
 		mv.addObject("team", team);
 		mv.setViewName("WEB-INF/views/showteam.jsp");

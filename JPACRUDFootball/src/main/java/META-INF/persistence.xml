@@ -12,6 +12,7 @@
 		<class>com.skilldistillery.jpacrud.entities.Player</class>
 		<class>com.skilldistillery.jpacrud.entities.Team</class>
 		<class>com.skilldistillery.jpacrud.entities.Position</class>
+		<class>com.skilldistillery.jpacrud.entities.Trophy</class>
 		<!-- Data -->
 		<class>com.skilldistillery.jpacrud.data.PlayerDAO</class>
 		<class>com.skilldistillery.jpacrud.data.PlayerDAOImpl</class>

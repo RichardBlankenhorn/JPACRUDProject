@@ -73,6 +73,39 @@
 		<div class="container">
 			<h1 class="text-uppercase mb-0">${team.teamName }</h1>
 			<hr class="star-light">
+			
+			<h2 class="text-center text-uppercase text-secondary mb-0">Trophies</h2>
+			<br>
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<h4 class="text-center">
+						<u>Champions League</u>
+					</h4>
+				</div>
+				<div class="form-group col-md-4">
+					<h4 class="text-center">
+						<u>League Titles</u>
+					</h4>
+				</div>
+				<div class="form-group col-md-4">
+					<h4 class="text-center">
+						<u>League Cup Titles</u>
+					</h4>
+				</div>
+			</div>
+			
+			<div class="form-row">
+				<div class="form-group col-md-4">
+					<h4 class="text-center text-uppercase text-secondary mb-0">${trophy.championsLeague }</h4>
+				</div>
+				<div class="form-group col-md-4">
+					<h4 class="text-center text-uppercase text-secondary mb-0">${trophy.leagueTitles }</h4>
+				</div>
+				<div class="form-group col-md-4">
+					<h4 class="text-center text-uppercase text-secondary mb-0">${trophy.leagueCups }</h4>
+				</div>
+			</div>
+			
 		</div>
 	</header>
 
